@@ -41,6 +41,53 @@ function uppercase(){
     return upperAsk;
 }
 
+//Function used to determine whether the user wants to include numbers in the password
+function numbers(){
+  numberAsk = prompt("Do you want to include numbers in your password? Please type YES or NO.");
+    if (numberAsk === null) {
+      alert("Please answer Yes or No");
+      numbers();
+
+    } else if (numberAsk === "YES" || numberAsk ==="yes") {
+      numberAsk = true;
+      return numberASK;
+
+    } else if (upperAsk === "NO" || upperAsk ==="no" ){
+      upperAsk = false;
+      return upperAsk;
+    
+    } else {
+      alert("Please answer Yes or No");
+      numbers();
+    }
+    return upperAsk;
+}
+
+//Function used to determine whether the user wants to include special characters in the password
+function special(){
+  specialAsk = prompt("Do you want to include special characters in your password? Please type YES or NO.");
+    if (specialAsk === null) {
+      alert("Please answer Yes or No");
+      numbers();
+
+    } else if (specialAsk === "YES" || specialAsk ==="yes") {
+      specialAsk = true;
+      return specialASK;
+
+    } else if (specialAsk === "NO" || specialAsk ==="no" ){
+      specialAsk = false;
+      return specialAsk;
+    
+    } else {
+      alert("Please answer Yes or No");
+      numbers();
+    }
+    return specialAsk;
+}
+
+//Function used to creat password based on input
+
+
 
 
 
