@@ -1,8 +1,8 @@
 // Assignment Code
-var lowercaseChar = "abcdefghijklmnopqrstuvwxyz";
-var uppercaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var numberChar = "0123456789";
-var specialChar = "!@#$%^&*()_-+={}[];:'`~<,>.?/|"
+var lowerCharacters = "abcdefghijklmnopqrstuvwxyz";
+var uppercCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var numberCharacters = "0123456789";
+var specialCharacters = "!@#$%^&*()_-+={}[];:'`~<,>.?/|"
 
 //Function used to determine the length of the password
 function length(){
@@ -85,21 +85,35 @@ function special(){
     return specialAsk;
 }
 
-//Function used to creat password based on input
+//Function used to create password based on input
 
+function generatePassword();
+  if (uppercaseAsk && numberAsk && specialAsk) {
+     var password = lowerCharacters + upperCharacters + numberCharacters + specialCharacters;
 
+  } else if (upperAsk && numberAsk) {
+    var password = lowerCharacters + upperCharacters + numberCharacters;
 
+  } else if (numberAsk && specialAsk) {
+    var password = lowerCharacters + numberCharacters + specialCharacters;
 
+  } else if (upperAsk && specialAsk) {
+    var password = lowerCharacters + upperCharacters + specialCharacters;
 
+  } else if (upperAsk) {
+    var password = lowerCharacters + upperCharacters;
 
+  } else if(numberAsk) {
+    var password = lowerCharacters + numberCharacters;
 
+  } else if (specialAsk) {
+    var password = lowerCharacters + specialCharacters;
 
-
-
-
-
-
-
+  } else {
+    var password = lowerCharacters;
+  }
+  return password;
+  }
 
 // Write password to the #password input
 function writePassword() {
