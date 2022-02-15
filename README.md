@@ -13,7 +13,7 @@ This is a password generator that can be used to generate a random passworrd bet
 
 ## Screenshot
    
-![Password Generator Screenshot](./Develop/assets/images/screenshot.png)
+![Password Generator Screenshot](./assets/images/screenshot.png)
 
 ## Deployment Link
 
