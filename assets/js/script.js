@@ -136,30 +136,53 @@ function generatePassword(){
   console.log(specialAsk);
   
 
-  if (upperAsk && numberAsk && specialAsk) {
+  if (lowerAsk && upperAsk && numberAsk && specialAsk) {
      var password = lowerCharacters + upperCharacters + numberCharacters + specialCharacters;
       console.log(password);
-  } else if (upperAsk && numberAsk) {
+  } else if (lowerAsk && upperAsk && numberAsk) {
     var password = lowerCharacters + upperCharacters + numberCharacters;
     console.log(password);
-  } else if (numberAsk && specialAsk) {
+  } else if ( lowerAsk && numberAsk && specialAsk) {
     var password = lowerCharacters + numberCharacters + specialCharacters;
     console.log(password);
-  } else if (upperAsk && specialAsk) {
+  } else if (lowerAsk && upperAsk && specialAsk) {
     var password = lowerCharacters + upperCharacters + specialCharacters;
     console.log(password);
-  } else if (upperAsk) {
+  } else if (lowerAsk && upperAsk) {
     var password = lowerCharacters + upperCharacters;
     console.log(password);
-  } else if(numberAsk) {
+  } else if (lowerAsk && numberAsk) {
     var password = lowerCharacters + numberCharacters;
     console.log(password);
-  } else if (specialAsk) {
+  } else if (lowerAsk && specialAsk) {
     var password = lowerCharacters + specialCharacters;
     console.log(password);
-  } else {
+  } else if (upperAsk && numberAsk) {
+    var password = upperCharacters + numberCharacters;
+    console.log(password);
+  } else if (upperAsk && specialAsk) {
+    var password = upperCharacters + specialCharacters;
+    console.log(password);
+  } else if (numberAsk && specialAsk) {
+    var password = numberCharacters + specialCharacters;
+    console.log(password);
+  } else if (upperAsk) {
+    var password = upperCharacters;
+    console.log(password);
+  } else if (specialAsk) {
+    var password = specialCharacters;
+    console.log(password);
+  } else if (numberAsk) {
+    var password = numberCharacters;
+    console.log(password);
+  } else if (lowerAsk) {
     var password = lowerCharacters;
     console.log(password);
+  } else {
+    alert("Please choose at least one character type.")
+    generatePassword();
+  
+    return password;
   }
 
   var passwordString = password
