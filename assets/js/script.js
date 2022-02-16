@@ -9,6 +9,7 @@ var generateBtn = document.querySelector("#generate");
 
 var passwordLength;
 var upperAsk;
+var lowerAsk;
 var numberAsk;
 var specialAsk;
 var password;
@@ -30,6 +31,29 @@ function length(){
     } 
     return passwordLength;
 }
+
+//Function used to determine whether to include lowercase characters in the password
+function lowercase(){
+  lowerAsk = prompt("Do you want to include lowercase letters in your password? Please type YES or NO.");
+    if (lowerAsk === null) {
+      alert("Please answer Yes or No");
+      lowercase();
+
+    } else if (lowerAsk === "YES" || lowerAsk ==="yes") {
+      upperAsk = true;
+      return upperAsk;
+
+    } else if (lowerAsk === "NO" || lowerAsk ==="no" ){
+      lowerAsk = false;
+      return lowerAsk;
+    
+    } else {
+      alert("Please answer Yes or No");
+      lowercase();
+    }
+    return lowerAsk;
+}
+
 
 //Function used to determine whether to include uppercase characters in the password
 function uppercase(){
@@ -102,6 +126,8 @@ function special(){
 function generatePassword(){
   length();
   console.log(passwordLength);
+  lowercase();
+  console.log(lowerAsk);
   uppercase();
   console.log(upperAsk);
   numbers();
